@@ -1,9 +1,11 @@
-import Tkinter
+import Tkinter as tk
 
-# create main main_window
-# Tk(screenName=None, baseName=None, className='Tk', useTk=1)
-main_window=Tkinter.firstGUI()
+# create main main_window m
+m=tk.Tk(screenName=None, baseName=None, className='Tk', useTk=1)
+# rename the main_window
+m.title('Hello there!')
+
 '''
 Widegets Space
 '''
-main_window.mainloop()
+m.mainloop()
