@@ -3,16 +3,22 @@ from Tkinter import *
 
 # create a class "Application"
 class Application(Frame):
-    # response when say_hi function is called upon
-    def say_hi(self):
-        print "Hello world!"
-    # response for third Button
-    def addition(self):
+
+    # response for addition button
+    def add(self):
         print "first number a?"
         a=float(raw_input())
         print "second number b?"
         b=float(raw_input())
         print "sum of %r and %r is %r:" % (a,b,a+b)
+
+    # response for subtract button
+    def subtract(self):
+        print "first number a?"
+        a=float(raw_input())
+        print "second number b?"
+        b=float(raw_input())
+        print "sum of %r and %r is %r:" % (a,b,a-b)
     # create Widegets
     def createWidgets(self):
         # create QUIT Button
@@ -27,18 +33,18 @@ class Application(Frame):
         self.QUIT["command"] =  self.quit
         # position of the button
         self.QUIT.pack({"side": "right"})
-        # second Button
-        self.hi_there = Button(self)
-        self.hi_there["text"] = "Hello",
-        self.hi_there["command"] = self.say_hi
-        self.hi_there.pack({"side": "right"})
 
-        # third button
+        # addition button
         self.third = Button(self)
-        self.third["text"]="Third",
-        self.third["command"]=self.addition
+        self.third["text"]="Add",
+        self.third["command"]=self.add
         self.third.pack({"side": "top"})
 
+        # subtract button
+        self.third = Button(self)
+        self.third["text"]="Add",
+        self.third["command"]=self.add
+        self.third.pack({"side": "top"})
 
     def __init__(self, master=None):
         Frame.__init__(self, master)
