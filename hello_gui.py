@@ -21,7 +21,6 @@ class Application(Frame):
         self.QUIT["command"] =  self.quit
         # position of the button
         self.QUIT.pack({"side": "right"})
-
         # second Button
         self.hi_there = Button(self)
         self.hi_there["text"] = "Hello",
